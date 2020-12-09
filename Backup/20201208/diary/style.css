@@ -1,0 +1,240 @@
+@media screen and (max-width:800px) {
+    body {
+        margin: 0 auto !important;
+        font-size: 0.7em !important;
+    }
+
+    .write_header {
+        text-align: center;
+        border-bottom: 1px solid #000;
+    }
+
+    .write_header h1 {
+        margin: 4px 0;
+    }
+
+    .gloval_menu a {
+        display: inline-block !important;
+        padding: 10px 20px;
+        border: 1px solid #000 !important;
+        color: white;
+
+    }
+
+    .pos-f-t h5 {
+        margin-bottom: 24px;
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .yellow {
+        background-color: yellow;
+    }
+
+    .select_width {
+        width: 60% !important;
+
+    }
+
+    .date {
+        border-bottom: 1px solid #000;
+    }
+
+    .tab_border {
+        border: 1px solid #000;
+        border-radius: 0% !important;
+    }
+
+    .row {
+        /* padding: 0 15px !important; */
+        text-align: center;
+    }
+
+    .contents {
+        height: 500px;
+        border: 1px solid #000;
+    }
+
+    .submit {
+        text-align: right;
+    }
+
+    .diary_area {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    #diary_text {
+        width: 100%;
+        height: 200px;
+    }
+
+    .hidden_submit {
+        display: none;
+    }
+
+    .tab {
+        border: 1px solid #000;
+        color: #007bff;
+    }
+
+    .delite {
+        display: none !important;
+    }
+
+    .tab_bar {
+        padding: 0 15px !important;
+        text-align: center;
+    }
+
+    .active {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .card-header {
+        padding: 1px !important;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: left !important;
+    }
+
+    .sleep_space {
+        width: 100%;
+    }
+
+    .evaluation_text {
+        text-align: right;
+        margin-bottom: 7px;
+    }
+
+    .mental {
+        width: 100%;
+    }
+
+    /* .add_button {
+        text-align: right;
+        display: inline-block;
+    } */
+
+    .hull_width {
+        width: 100%;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    .error {
+        color: red;
+    }
+
+    .reply_error {
+        color: red;
+        text-align: left;
+    }
+
+    .hidden_icon {
+        display: none;
+    }
+
+    /* タイムライン */
+    .tweet_area, .reply_area {
+        border-bottom: 1px solid #000;
+        padding: 20px 15px
+    }
+
+    .image_area {
+        height: 60px;
+    }
+
+    .user_name_area {
+        text-align: left;
+    }
+
+    .tweet_date_area {
+        text-align: left;
+    }
+
+    .tweet_time_area {
+        font-size: .5em;
+        text-align: right;
+    }
+
+    .tweet_title_area {
+        text-align: left;
+    }
+
+    .tweet_text_area {
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .icon {
+        margin: 10px 5px;
+    }
+
+    .icon_area {
+        text-align: left;
+    }
+
+    .icon:hover {
+        cursor: pointer;
+    }
+
+    .reply_form {
+        width: 90%;
+        text-align: left;
+        margin-left: 15px;
+    }
+
+    #reply_text_area {
+        width: 100%;
+        height: 200px;
+        /* margin-left: 15px; */
+    }
+
+    .reply_tweet_area {
+        border-bottom: 1px dotted #000;
+        padding: 20px 15px
+    }
+
+    .reply_submit {
+        text-align: right;
+    }
+
+    /* プロフィール */
+    .name_edit {
+        text-align: left;
+        margin: 5px 0;
+    }
+
+    .name, .edit {
+        line-height: 35px;
+        font-size: 1.2em;
+    }
+
+    .edit a {
+        text-align: center;
+        border: 1px solid gray;
+        display: inline-block;
+        /* padding: 0; */
+        width: 100%;
+        background-color: lightgray;
+        color: black;
+        border-radius: 5px;
+    }
+
+    .tweet_info .row {
+        margin: 0;
+    }
+
+    .profile.px-3 {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #000;
+    }
+}

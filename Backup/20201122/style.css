@@ -1,0 +1,49 @@
+body {
+    width: 700px;
+    margin: 0 auto;
+    background-color: darkturquoise;
+}
+header {
+    border-bottom: 1px solid #000;
+}
+h1.title {
+    margin-bottom: 5px;
+}
+p.title {
+    margin-top: 5px;
+}
+ul.top-center-item {
+    list-style: none;
+}
+.top-center-item {
+    text-align: center;
+}
+.stringLetter {
+    font-size: 1.5em;
+}
+#create-button, #login-button {
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(50, 50, 50, .5);
+}
+#create-button:active , #login-button:active {
+    padding: 20px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: 3px;
+    bottom: 3px;
+    box-shadow: none;
+
+}
+#create-button {
+    background-color: gold;
+}
+#login-button {
+    background-color: tomato;
+}
+
+@media screen and(max-width:480px){
+    ul {
+        font-size: 95%;
+    }
+}

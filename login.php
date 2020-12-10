@@ -60,7 +60,7 @@
         if ($_COOKIE["auto_login"] === "on") {
             setcookie("auto_login", "on", time() + 20);
         } else {
-            setcookie("auto_login", "on", time() + 20);
+            setcookie("auto_login", "on", time() - 1);
         }
     }
 
@@ -79,8 +79,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        .contents {height: <?php echo 450 ?>px;}
-        .input_area {height: <?php echo 350 ?>px;}
+        .contents {
+            height: auto;
+            padding-bottom: 10px;
+        }
+        .input_area {
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -121,32 +126,12 @@
                                 <a href="./join/index.php">アカウントを作成</a>
                             </form>
                         </dev>
-                        <pre>
-                            <?php
-                                //  echo "_POST[auto_login]";
-                                //  echo "<br>";
-                                //  echo "<br>";
-                                //  var_dump($_POST["auto_login"]);
-                                //  echo "<br>";
-                                //  echo "<br>";
-                                //  echo "_COOKIE[auto_login]";
-                                //  echo "<br>";
-                                //  echo "<br>";
-                                //  var_dump($_COOKIE["auto_login"]);
-                                //  echo "<br>";
-                                //  echo "<br>";
-                                //  echo "_COOKIE[email]";
-                                //  echo "<br>";
-                                //  echo "<br>";
-                                //  var_dump($_COOKIE["email"]);
-                            ?>
-                        </pre>
                         </div>
                     </div>
                 </div>
+                <a href="./">トップページへ戻る</a>
             </div>
         </div>
-    <a href="./">トップページへ戻る</a>
     </div>
 
     <!-- Bootstrap4 -->

@@ -120,7 +120,7 @@
                                 <label for="login_checkbox">次回から自動的にログイン</label>
                                 <br>
                                 <br>
-                                <a href="#">パスワードを忘れましたか？</a>
+                                <s><a href="#">パスワードを忘れましたか？</a></s>
                                 <br>
                                 <br>
                                 <a href="./join/index.php">アカウントを作成</a>

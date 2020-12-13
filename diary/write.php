@@ -308,7 +308,7 @@
                 <div class="pos-f-t">
                     <div class="collapse" id="navbarToggleExternalContent">
                         <div class="bg-dark p-4">
-                            <h5 class="text-white h4">積み上げDiary</h5>
+                            <h5 class="text-white h4"><?php echo $title; ?></h5>
                             <div class="gloval_menu">
                                 <a href="./">ホーム</a>
                                 <a href="./profile.php">プロフィール</a>
@@ -334,7 +334,7 @@
                         }
                     ?>
                     <!-- タイトル -->
-                        <div class="row">
+                        <div class="row mx-0">
                             <div class="write_header col-12 col-sm-12 py-1"><h1 class="">日記記録画面</h1></div>
                         </div>
                     <!-- /タイトル -->

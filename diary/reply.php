@@ -74,7 +74,7 @@ if (($_POST["reply_submit"] === "返信")) {
                 <div class="pos-f-t">
                     <div class="collapse" id="navbarToggleExternalContent">
                         <div class="bg-dark p-4">
-                            <h5 class="text-white h4">積み上げDiary</h5>
+                            <h5 class="text-white h4"><?php echo $title; ?></h5>
                             <div class="gloval_menu">
                                 <a href="./">ホーム</a>
                                 <a href="./profile.php">プロフィール</a>
@@ -91,11 +91,16 @@ if (($_POST["reply_submit"] === "返信")) {
                 </div>
             <!-- /ナビバー -->
 
-        <!-- 日付選択エリア -->
-        <div class="date">
-        </div>
-        <h1>リプライ</h1>
-        <div class="reply_tweet_area">
+            <!-- container-fluid -->
+            <div class="container-fluid">
+                <!-- タイトル -->
+                    <div class="row mx-0">
+                        <div class="write_header col-12 col-sm-12 py-1"><h1 class="">リプライ</h1></div>
+                    </div>
+                <!-- /タイトル -->
+            </div>
+        <!-- <h1>リプライ</h1> -->
+        <div class="reply_tweet_area mx-3">
             <div class="tweet">
                 <div class="row">
                     <div class="col-3 col-sm-3 px-1"><img src="../usersPicture/<?php echo $userPicture["picture"]; ?>" alt="アイコン" width=60 height=60></div>
@@ -112,7 +117,7 @@ if (($_POST["reply_submit"] === "返信")) {
             </div>
         </div>
         <!-- リプライ -->
-        <div class="reply_area">
+        <div class="reply_area mx-3">
             <div class="row">
                 <div class="col-3 col-sm-3 px-1"><img src="../usersPicture/<?php echo h($repUser["picture"]); ?>" alt="アイコン" width=60 height=60></div>
                 <div class="col-9 col-sm-9 px-1">

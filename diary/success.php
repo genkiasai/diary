@@ -37,7 +37,7 @@ if ($_POST["back"] === "戻る") {
                 <div class="pos-f-t">
                     <div class="collapse" id="navbarToggleExternalContent">
                         <div class="bg-dark p-4">
-                            <h5 class="text-white h4">積み上げDiary</h5>
+                            <h5 class="text-white h4"><?php echo $title; ?></h5>
                             <div class="gloval_menu">
                                 <a href="./">ホーム</a>
                                 <a href="./profile.php">プロフィール</a>

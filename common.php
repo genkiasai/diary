@@ -10,7 +10,8 @@ function h($str) {
 date_default_timezone_set("Asia/Tokyo");
 
 // タイトル
-$title = "積み上げ日記";
+// $title = "積み上げ日記";
+$title = "Share Diary";
 
 // 時間差を求める関数
 function elapsedTime ($dateTime) {

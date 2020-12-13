@@ -49,7 +49,7 @@ if (!empty($_SESSION["user"])) {
                 <div class="pos-f-t">
                     <div class="collapse" id="navbarToggleExternalContent">
                         <div class="bg-dark p-4">
-                            <h5 class="text-white h4">積み上げDiary</h5>
+                            <h5 class="text-white h4"><?php echo $title; ?></h5>
                             <div class="gloval_menu">
                                 <a href="./">ホーム</a>
                                 <a href="./profile.php">プロフィール</a>
@@ -69,13 +69,13 @@ if (!empty($_SESSION["user"])) {
             <!-- container-fluid -->
             <div class="container-fluid">
                 <!-- タイトル -->
-                    <div class="row">
+                    <div class="row mx-0">
                         <div class="write_header col-12 col-sm-12 py-1"><h1 class="">プロフィール</h1></div>
                     </div>
                 <!-- /タイトル -->
             </div>
             <!-- プロフィール -->
-                <div class="profile px-3">
+                <div class="profile mx-3 px-3">
                     <div class="info1">
                         <div class="row">
                             <div class="icon col-3 col-sm-3">
@@ -122,7 +122,7 @@ if (!empty($_SESSION["user"])) {
 
             <!-- 投稿履歴 -->
             <?php foreach ($tweets as $tweet): ?>
-                <div class="tweet_area">
+                <div class="tweet_area mx-3">
                 <div class="tweet mx-3">
                     <div class="row">
                         <div class="col-3 col-sm-3 px-1"><img src="../usersPicture/<?php echo $user["picture"]; ?>" alt="アイコン" width=60 height=60></div>

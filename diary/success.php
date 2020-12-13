@@ -23,7 +23,6 @@ if ($_POST["back"] === "戻る") {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>送信完了｜<?php echo $title; ?></title>
     <link rel="stylesheet" href="style.css?v=3">
 
@@ -64,11 +63,6 @@ if ($_POST["back"] === "戻る") {
 
     </div>
     <!-- /スマホ用 -->
-
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

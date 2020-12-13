@@ -23,11 +23,6 @@ if (!empty($_SESSION["user"])) {
     exit();
 }
 
-// ログイン者の投稿履歴を取得
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +30,6 @@ if (!empty($_SESSION["user"])) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>プロフィール｜<?php echo $title; ?></title>
     <link rel="stylesheet" href="style.css?v=4">
 
@@ -149,11 +143,6 @@ if (!empty($_SESSION["user"])) {
             <!-- /投稿履歴 -->
     </div>
     <!-- /スマホ用 -->
-
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -80,11 +80,8 @@
     }
 
     // タブを切り替えても値を持ち続ける処理
-    // 日記タブに居続ける場合は変数$diary_textにtextareaの値を入れ続ける。textareaの値には変数$diary_textの値を入れ続ける
-    // $_POST["diary_data"]を用意して各種情報を入れる
-    // $_POST["diary_data"]はhiddenで持ち続ける
-    // 詳細情報タブから日記タブに遷移してきた場合、$_POST["diary_text"]に$_POST["diary_data"]["diary_text"]の値を代入する
-    // $_POST["diary_text"]の値を変数$diary_textに代入してtextareaに表示する
+    // 連想配列diary_dataは裏で値を持つ役割を持つ
+    // hiddenで値を持ち続ける
         // 日記タブにいる場合
         if ($_POST["diary_data"]["tab"] === "1") {
             // 詳細情報タブから遷移してきた場合
@@ -964,26 +961,32 @@
                                                                 </div>
                                                                 <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                                                 <div class="card-body">
-                                                                    <div class="evaluation_text">悪い　　←　　普通　　→　　良い</div>
+                                                                    <div class="evaluation_text row mr-5">
+                                                                        <div class="col-3 col-sm-3">悪い</div>
+                                                                        <div class="col-1 col-sm-1">←</div>
+                                                                        <div class="col-3 col-sm-3">普通</div>
+                                                                        <div class="col-1 col-sm-1">→</div>
+                                                                        <div class="col-3 col-sm-3">良い</div>
+                                                                    </div>
                                                                     <div class="evaluation_parts row">
                                                                         <div class="evaluation_title col-12 col-sm-12 px-2">起床時の感覚:</div>
                                                                         <?php
                                                                             for ($i=0; $i<=5; $i++) {
                                                                                 if ($i == $get_up_sense) {
                                                                                     if ($i == 0) {
-                                                                                        echo '<div class="col-4 col-sm-4 p-0"><input class="" id="get_up_sense_0" type="radio" name="get_up_sense" value="0" checked><label for="get_up_sense_0">指定しない</label></div>';
+                                                                                        echo '<div class="col-4 col-sm-2 p-0"><input class="" id="get_up_sense_0" type="radio" name="get_up_sense" value="0" checked><label for="get_up_sense_0">指定しない</label></div>';
                                                                                     } elseif ($i == 5) {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0"><input class="" id="get_up_sense_' . $i . '" type="radio" name="get_up_sense" value=' . $i . ' checked><label for="get_up_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0"><input class="" id="get_up_sense_' . $i . '" type="radio" name="get_up_sense" value=' . $i . ' checked><label for="get_up_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     } else {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0 mr-3"><input class="" id="get_up_sense_' . $i . '" type="radio" name="get_up_sense" value=' . $i . ' checked><label for="get_up_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0 mr-3 mr-sm-0"><input class="" id="get_up_sense_' . $i . '" type="radio" name="get_up_sense" value=' . $i . ' checked><label for="get_up_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }
                                                                                 } else {
                                                                                     if ($i == 0) {
-                                                                                        echo '<div class="col-4 col-sm-4 p-0"><input class="" id="get_up_sense_0" type="radio" name="get_up_sense" value="0"><label for="get_up_sense_0">指定しない</label></div>';
+                                                                                        echo '<div class="col-4 col-sm-2 p-0"><input class="" id="get_up_sense_0" type="radio" name="get_up_sense" value="0"><label for="get_up_sense_0">指定しない</label></div>';
                                                                                     } elseif ($i == 5) {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0"><input class="" id="get_up_sense_' . $i . '" type="radio" name="get_up_sense" value=' . $i . '><label for="get_up_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0"><input class="" id="get_up_sense_' . $i . '" type="radio" name="get_up_sense" value=' . $i . '><label for="get_up_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     } else {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0 mr-3"><input class="" id="get_up_sense_' . $i . '" type="radio" name="get_up_sense" value=' . $i . '><label for="get_up_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0 mr-3 mr-sm-0"><input class="" id="get_up_sense_' . $i . '" type="radio" name="get_up_sense" value=' . $i . '><label for="get_up_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }
                                                                                 }
                                                                             }
@@ -995,19 +998,19 @@
                                                                             for ($i=0; $i<=5; $i++) {
                                                                                 if ($i == $going_to_bed_sense) {
                                                                                     if ($i == 0) {
-                                                                                        echo '<div class="col-4 col-sm-4 p-0"><input class="" id="going_to_bed_sense_0" type="radio" name="going_to_bed_sense" value="0" checked><label for="going_to_bed_sense_0">指定しない</label></div>';
+                                                                                        echo '<div class="col-4 col-sm-2 p-0"><input class="" id="going_to_bed_sense_0" type="radio" name="going_to_bed_sense" value="0" checked><label for="going_to_bed_sense_0">指定しない</label></div>';
                                                                                     } elseif ($i == 5) {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0"><input class="" id="going_to_bed_sense_' . $i . '" type="radio" name="going_to_bed_sense" value=' . $i . ' checked><label for="going_to_bed_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0"><input class="" id="going_to_bed_sense_' . $i . '" type="radio" name="going_to_bed_sense" value=' . $i . ' checked><label for="going_to_bed_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }else {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0 mr-3"><input class="" id="going_to_bed_sense_' . $i . '" type="radio" name="going_to_bed_sense" value=' . $i . ' checked><label for="going_to_bed_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0 mr-3 mr-sm-0"><input class="" id="going_to_bed_sense_' . $i . '" type="radio" name="going_to_bed_sense" value=' . $i . ' checked><label for="going_to_bed_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }
                                                                                 } else {
                                                                                     if ($i == 0) {
-                                                                                        echo '<div class="col-4 col-sm-4 p-0"><input class="" id="going_to_bed_sense_0" type="radio" name="going_to_bed_sense" value="0"><label for="going_to_bed_sense_0">指定しない</label></div>';
+                                                                                        echo '<div class="col-4 col-sm-2 p-0"><input class="" id="going_to_bed_sense_0" type="radio" name="going_to_bed_sense" value="0"><label for="going_to_bed_sense_0">指定しない</label></div>';
                                                                                     } elseif ($i == 5) {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0"><input class="" id="going_to_bed_sense_' . $i . '" type="radio" name="going_to_bed_sense" value=' . $i . '><label for="going_to_bed_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0"><input class="" id="going_to_bed_sense_' . $i . '" type="radio" name="going_to_bed_sense" value=' . $i . '><label for="going_to_bed_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }else {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0 mr-3"><input class="" id="going_to_bed_sense_' . $i . '" type="radio" name="going_to_bed_sense" value=' . $i . '><label for="going_to_bed_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0 mr-3 mr-sm-0"><input class="" id="going_to_bed_sense_' . $i . '" type="radio" name="going_to_bed_sense" value=' . $i . '><label for="going_to_bed_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }
                                                                                 }
                                                                             }
@@ -1019,19 +1022,19 @@
                                                                             for ($i=0; $i<=5; $i++) {
                                                                                 if ($i == $happiness_sense) {
                                                                                     if ($i == 0) {
-                                                                                        echo '<div class="col-4 col-sm-4 p-0"><input class="" id="happiness_sense_0" type="radio" name="happiness_sense" value="0" checked><label for="happiness_sense_0">指定しない</label></div>';
+                                                                                        echo '<div class="col-4 col-sm-2 p-0"><input class="" id="happiness_sense_0" type="radio" name="happiness_sense" value="0" checked><label for="happiness_sense_0">指定しない</label></div>';
                                                                                     } elseif ($i == 5) {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0"><input class="" id="happiness_sense_' . $i . '" type="radio" name="happiness_sense" value=' . $i . ' checked><label for="happiness_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0"><input class="" id="happiness_sense_' . $i . '" type="radio" name="happiness_sense" value=' . $i . ' checked><label for="happiness_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }else {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0 mr-3"><input class="" id="happiness_sense_' . $i . '" type="radio" name="happiness_sense" value=' . $i . ' checked><label for="happiness_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0 mr-3 mr-sm-0"><input class="" id="happiness_sense_' . $i . '" type="radio" name="happiness_sense" value=' . $i . ' checked><label for="happiness_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }
                                                                                 } else {
                                                                                     if ($i == 0) {
-                                                                                        echo '<div class="col-4 col-sm-4 p-0"><input class="" id="happiness_sense_0" type="radio" name="happiness_sense" value="0"><label for="happiness_sense_0">指定しない</label></div>';
+                                                                                        echo '<div class="col-4 col-sm-2 p-0"><input class="" id="happiness_sense_0" type="radio" name="happiness_sense" value="0"><label for="happiness_sense_0">指定しない</label></div>';
                                                                                     } elseif ($i == 5) {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0"><input class="" id="happiness_sense_' . $i . '" type="radio" name="happiness_sense" value=' . $i . '><label for="happiness_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0"><input class="" id="happiness_sense_' . $i . '" type="radio" name="happiness_sense" value=' . $i . '><label for="happiness_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }else {
-                                                                                        echo '<div class="col-1 col-sm-1 p-0 mr-3"><input class="" id="happiness_sense_' . $i . '" type="radio" name="happiness_sense" value=' . $i . '><label for="happiness_sense_' . $i . '">' . $i .'</label></div>';
+                                                                                        echo '<div class="col-1 col-sm-2 p-0 mr-3 mr-sm-0"><input class="" id="happiness_sense_' . $i . '" type="radio" name="happiness_sense" value=' . $i . '><label for="happiness_sense_' . $i . '">' . $i .'</label></div>';
                                                                                     }
                                                                                 }
                                                                             }
@@ -1168,13 +1171,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-<!-- メモ
-タイトルの挙動は後回し
-やりたいのは
-・タイトルが選択した日付と連動すること
-・ユーザーが書き換えたらユーザーが書き換えたタイトルをずっと表示
-・ユーザーが書き換えたけど、日付の部分がいじられなかった（2020/10/25の私の日記とかの）場合は日付を連動させる
-
--->

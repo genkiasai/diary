@@ -5,15 +5,15 @@
 
     // セッションとデータベースの登録情報から変数に情報を渡してセッションを放棄する。セッション情報が無ければログインページに飛ばす。
 
-        $users = $db->prepare("SELECT * FROM users WHERE id=?");
-        $users->execute(array($_SESSION["user"]["id"]));
-        $user = $users->fetch();
-        if (empty($user)) {
-            header("Location: ../login.php");
-        }
+    $users = $db->prepare("SELECT * FROM users WHERE id=?");
+    $users->execute(array($_SESSION["user"]["id"]));
+    $user = $users->fetch();
+    if (empty($user)) {
+        header("Location: ../login.php");
+    }
 
-        $diaries = $db->prepare("SELECT u.name, u.picture, d.* FROM diary_data d, users u WHERE d.user_id=u.id ORDER BY d.created DESC");
-        $diaries->execute();
+    $diaries = $db->prepare("SELECT u.name, u.picture, d.* FROM diary_data d, users u WHERE d.user_id=u.id ORDER BY d.created DESC");
+    $diaries->execute();
         
 ?>
 
@@ -23,9 +23,7 @@
     <link rel="stylesheet" href="style.css?v=36">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>ホーム｜<?php echo $title; ?></title>
-    <!-- <link rel="stylesheet" href="style.css?v=2"> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">

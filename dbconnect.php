@@ -13,14 +13,3 @@ try {
     print($e->getMessage);
 }
 ?>
-
-
-<!-- 会員ID：fja21386
-パスワード：1224asai
-サーバーコントロールパネル
-ドメイン名：muscle.sakura.ne.jp
-パスワード：GpmQThySh3+8
-データベース
-データベース名：muscle_study
-パスワード：1025asai
-テーブルの接頭語：muscle-study_wp_ -->

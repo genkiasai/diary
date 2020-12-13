@@ -23,61 +23,10 @@
     <link rel="stylesheet" href="style.css?v=35">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>ホーム｜<?php echo $title; ?></title>
-    <!-- <link rel="stylesheet" href="style.css?v=2"> -->
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <style>
-        .test {
-            color: red;
-        }
-            /* タイムライン */
-    /* .tweet_area {
-        border-bottom: 1px solid #000;
-        padding: 20px 15px
-    }
-
-    .image_area {
-        height: 60px;
-    }
-
-    .user_name_area {
-        text-align: left;
-    }
-
-    .tweet_date_area {
-        text-align: left;
-    }
-
-    .tweet_time_area {
-        font-size: .5em;
-        text-align: right;
-    }
-
-    .tweet_title_area {
-        text-align: left;
-    }
-
-    .tweet_text_area {
-        margin: 10px 0;
-        text-align: left;
-    }
-
-    .icon {
-        margin: 10px 5px;
-    }
-
-    .icon_area {
-        text-align: left;
-    }
-
-    .icon:hover {
-        cursor: pointer;
-    } */
-    </style>
 
 </head>
 <body>

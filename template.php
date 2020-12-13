@@ -7,57 +7,40 @@ require("../common.php");
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <link rel="stylesheet" href="style.css?v=36">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title></title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <title>ホーム｜<?php echo $title; ?></title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 </head>
 <body>
     <!-- スマホ用 -->
-    <div class="width480">
+        <div class="width480">
             <!-- ナビバー -->
-                <div class="pos-f-t">
-                    <div class="collapse" id="navbarToggleExternalContent">
-                        <div class="bg-dark p-4">
-                            <h5 class="text-white h4">積み上げDiary</h5>
-                            <div class="gloval_menu">
-                                <a href="./">ホーム</a>
-                                <a href="./profile.php">プロフィール</a>
-                                <a href="./write.php">記録する</a>
-                                <a href="./logout.php">ログアウト</a>
-                            </div>
+            <div class="pos-f-t">
+                <div class="collapse" id="navbarToggleExternalContent">
+                    <div class="bg-dark p-4">
+                        <h5 class="text-white h4"><?php echo $title; ?></h5>
+                        <div class="gloval_menu">
+                            <a href="./">ホーム</a>
+                            <a href="./profile.php">プロフィール</a>
+                            <a href="./write.php">記録する</a>
+                            <a href="./logout.php">ログアウト</a>
                         </div>
                     </div>
-                    <nav class="navbar navbar-dark bg-dark">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                    </nav>
                 </div>
+                <nav class="navbar navbar-dark bg-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                </nav>
+            </div>
             <!-- /ナビバー -->
-
-        <!-- 日付選択エリア -->
-        <div class="date">
         </div>
-        <h1>プロフィール画面準備中</h1><br>
-        スマホ用画面<br>
-        現在：800px指定
-
-
-
-
-
-    </div>
     <!-- /スマホ用 -->
-
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

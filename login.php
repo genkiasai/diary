@@ -123,7 +123,7 @@
                                 <s><a href="#">パスワードを忘れましたか？</a></s>
                                 <br>
                                 <br>
-                                <a href="./join/index.php">アカウントを作成</a>
+                                <a href="./join/index.php">アカウントを作成</a>
                             </form>
                         </dev>
                         </div>
